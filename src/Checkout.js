@@ -17,6 +17,7 @@ function Checkout() {
             <div className="checkout">
 
                 <div className="checkout_left">
+                    <h3>Hello, {state.user?.email}</h3>
                     <div className="checkout_title">
                         <h2>Your Shopping Basket</h2>
                         {state.basket.map((item) => {
@@ -31,7 +32,7 @@ function Checkout() {
                     </div>
                 </div>
                 <div className="checkout_right">
-                    < SubTotal  />
+                    < SubTotal />
                 </div>
             </div>
         </>

@@ -1,22 +1,48 @@
 import './App.css';
+import { useEffect } from 'react'
 import Header from './Header'
 import Home from './Home'
 import Checkout from './Checkout'
+import Login from './Login'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { useStateValue } from './StateProvider'
+import { auth } from './firebase'
 function App() {
+  const [state, dispatch] = useStateValue();
+  useEffect(() => {
+    auth.onAuthStateChanged(authUser => {
+      //console.log("This is our user", authUser);
+      if (authUser) {
+        dispatch({
+          type: 'SET_USER',
+          user: authUser
+        })
+      }
+      else {
+        dispatch({
+          type: 'SET_USER',
+          user: null
+        })
+      }
+    })
+  }, [])
   return (
     <Router>
       <div className="App">
-        <Header />
         <Switch>
+          <Route path='/login'>
+            <Login />
+          </Route>
           <Route path="/checkout">
-
+            <Header />
             <Checkout />
           </Route>
           <Route path="/about">
+            <Header />
             <h1>I am about</h1>
           </Route>
           <Route path="/">
+            <Header />
             <Home />
           </Route>
         </Switch>

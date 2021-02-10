@@ -13,43 +13,13 @@ function Home() {
                         title="shashwat"
                         price={50}
                         imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
-                        rating={5}
+                        rating={3}
                     />
                     < Product
                         id='1'
-                        title="shashwat"
-                        price={50}
-                        imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
-                        rating={5}
-                    />
-                </div>
-                <div className="home_row">
-                    < Product
-                        id='1'
-                        title="shashwat"
-                        price={50}
-                        imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
-                        rating={5}
-                    />
-                    < Product
-                        id='1'
-                        title="shashwat"
-                        price={50}
-                        imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
-                        rating={5}
-                    />
-                    < Product
-                        id='1'
-                        title="shashwat"
-                        price={50}
-                        imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
-                        rating={5}
-                    />
-                    < Product
-                        id='1'
-                        title="shashwat"
-                        price={50}
-                        imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
+                        title="Computers & Accessories"
+                        price={50000}
+                        imageSrc="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg"
                         rating={5}
                     />
                 </div>
@@ -59,6 +29,36 @@ function Home() {
                         title="shashwat"
                         price={50}
                         imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
+                        rating={5}
+                    />
+                    < Product
+                        id='1'
+                        title="Products for every room in your home"
+                        price={25000}
+                        imageSrc="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg"
+                        rating={5}
+                    />
+                    < Product
+                        id='1'
+                        title="Get fit at home"
+                        price={5000}
+                        imageSrc="https://images-na.ssl-images-amazon.com/images/G/01/events/GFAH/GWDesktop_SingleImageCard_fitathome_1x._SY304_CB434924743_.jpg"
+                        rating={5}
+                    />
+                    < Product
+                        id='1'
+                        title="hello every one this looks ccool"
+                        price={50}
+                        imageSrc="https://m.media-amazon.com/images/I/91nHu1NmPbL._AC_UL320_.jpg"
+                        rating={5}
+                    />
+                </div>
+                <div className="home_row">
+                    < Product
+                        id='1'
+                        title="Amazon Basics Small Digital Alarm Clock with Nightlight and Battery Backup, LED Display"
+                        price={6852}
+                        imageSrc="https://m.media-amazon.com/images/I/41gT9mzRM8L._AC_SY200_.jpg"
                         rating={5}
                     />
                 </div>
