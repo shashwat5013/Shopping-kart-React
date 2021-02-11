@@ -1,7 +1,7 @@
 import React from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from './StateProvider'
-function CheckoutProduct({ id, title, image, price, rating }) {
+function CheckoutProduct({ id, title, image, price, rating, hidebutton }) {
     const [state, dispatch] = useStateValue();
     const deleteFromBasket = () => {
         dispatch({
@@ -26,7 +26,9 @@ function CheckoutProduct({ id, title, image, price, rating }) {
                         <p>🌟</p>
                     ))}
                 </p>
-                <button onClick={deleteFromBasket}>Remove From Cart</button>
+                {!hidebutton && (
+                    <button onClick={deleteFromBasket}>Remove From Cart</button>
+                )}
             </div>
         </div>
     )
