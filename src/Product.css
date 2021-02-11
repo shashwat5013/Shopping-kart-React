@@ -34,3 +34,11 @@
     padding-left: 0.5rem;
     cursor: pointer;
 }
+.product>button:hover{
+    box-shadow: 0px 0px 5px 5px  rgb(112, 243, 130);
+}
+.product:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 10px  rgb(158, 137, 251);
+    transform: translate(-2px,-2px);
+}

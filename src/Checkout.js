@@ -3,7 +3,9 @@ import './Checkout.css'
 import SubTotal from './SubTotal'
 import CheckoutProduct from './CheckoutProduct'
 import { useStateValue } from './StateProvider'
+import { useHistory } from 'react-router-dom'
 function Checkout() {
+    const history = useHistory();
     const [state] = useStateValue();
     return (
         <>

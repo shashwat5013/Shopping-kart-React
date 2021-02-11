@@ -2,9 +2,11 @@ import React from 'react'
 import './SubTotal.css'
 import CurrencyFormat from "react-currency-format"
 import { useStateValue } from './StateProvider'
+import { useHistory } from 'react-router-dom'
 function SubTotal(props) {
+    const history = useHistory();
     const [state] = useStateValue();
-    console.log(state.sum)
+    //console.log(state.sum)
     return (
         <div className="subtotal">
             <CurrencyFormat className="currenyFormat"
@@ -28,7 +30,9 @@ function SubTotal(props) {
                 prefix={"Rs "}
 
             />
-            <button>Proceed to Checkout</button>
+            {state.sum === 0 ? <p></p> :
+                <button onClick={(e) => history.push('/payment')}>Proceed to Checkout</button>
+            }
         </div>
     )
 }

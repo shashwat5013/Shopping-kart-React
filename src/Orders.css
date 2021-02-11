@@ -1,0 +1,7 @@
+.orders{
+    align-items: center;
+    padding: 2px;
+}
+.orders>h1{
+    text-align: center;
+}
