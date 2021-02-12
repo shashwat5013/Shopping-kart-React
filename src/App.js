@@ -10,6 +10,7 @@ import { auth } from './firebase'
 import Payment from './Payment'
 import Orders from './Orders'
 import Discount from './Discount'
+import FlipMove from 'react-flip-move'
 function App() {
   const [state, dispatch] = useStateValue();
   useEffect(() => {

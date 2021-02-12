@@ -3,6 +3,7 @@ import './Discount.css'
 import { useStateValue } from './StateProvider'
 import { useHistory } from 'react-router-dom'
 import CheckoutProduct from './CheckoutProduct'
+import FlipMove from 'react-flip-move'
 function Discount() {
     const history = useHistory();
     const [state] = useStateValue();

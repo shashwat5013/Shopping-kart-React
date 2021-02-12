@@ -5,6 +5,7 @@ import CheckoutProduct from './CheckoutProduct'
 import { useHistory } from 'react-router-dom'
 import { db } from './firebase'
 import uuid from 'react-uuid'
+import FlipMove from 'react-flip-move'
 function Payment() {
     const history = useHistory()
     const [state, dispatch] = useStateValue();

@@ -5,6 +5,7 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from 'react-router-dom'
 import { useStateValue } from './StateProvider'
 import { auth } from './firebase'
+import FlipMove from 'react-flip-move'
 function Header() {
     const [state, dispatch] = useStateValue();
     const userAuthentication = () => {

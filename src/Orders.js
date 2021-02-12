@@ -2,6 +2,7 @@ import React from 'react'
 import './Orders.css'
 import { db } from './firebase'
 import { useStateValue } from './StateProvider'
+import FlipMove from 'react-flip-move'
 import Order from './Order'
 function Orders() {
     const [orders, setOrders] = React.useState([]);

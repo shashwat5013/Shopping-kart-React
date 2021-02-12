@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import './CheckoutProduct.css'
 import { useStateValue } from './StateProvider'
-function CheckoutProduct({ id, title, image, price, rating, hidebutton }) {
+import FlipMove from 'react-flip-move'
+const CheckoutProduct = forwardRef(({ id, title, image, price, rating, hidebutton }, ref) => {
     const [state, dispatch] = useStateValue();
     const deleteFromBasket = () => {
         dispatch({
@@ -11,7 +12,7 @@ function CheckoutProduct({ id, title, image, price, rating, hidebutton }) {
         })
     }
     return (
-        <div className='checkoutproduct'>
+        <div ref={ref} className='checkoutproduct'>
             <div className="checkoutproduct_image">
                 <img src={image} ></img>
             </div>
@@ -32,6 +33,6 @@ function CheckoutProduct({ id, title, image, price, rating, hidebutton }) {
             </div>
         </div>
     )
-}
+})
 
 export default CheckoutProduct

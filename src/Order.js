@@ -2,6 +2,7 @@ import React from 'react'
 import './Order.css'
 import moment from 'moment'
 import CheckoutProduct from './CheckoutProduct'
+import FlipMove from 'react-flip-move'
 function Order({ order }) {
     return (
         <div className="order">

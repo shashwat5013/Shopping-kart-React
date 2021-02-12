@@ -3,6 +3,7 @@ import './SubTotal.css'
 import CurrencyFormat from "react-currency-format"
 import { useStateValue } from './StateProvider'
 import { useHistory } from 'react-router-dom'
+import FlipMove from 'react-flip-move'
 function SubTotal(props) {
     const history = useHistory();
     const [state] = useStateValue();

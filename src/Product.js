@@ -1,6 +1,7 @@
 import React from 'react'
 import './Product.css'
 import { useStateValue } from './StateProvider'
+import FlipMove from 'react-flip-move'
 function Product({ id, title, imageSrc, price, rating }) {
     const [state, dispatch] = useStateValue();
     console.log(state.sum)
