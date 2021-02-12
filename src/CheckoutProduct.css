@@ -9,9 +9,11 @@
     /* align-items: center;
     width: fit-content; */
 }
-.checkoutproduct_image{
-    /* padding: 20px; */
-    margin-right:20px;
+.checkoutproduct_image>img{
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
 }
 .checkoutproduct_info{
     display:flex;

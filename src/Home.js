@@ -9,26 +9,26 @@ function Home() {
                 </img>
                 <div className="home_row">
                     < Product
-                        id='1'
+                        id='B'
                         title="shashwat"
-                        price={50}
-                        imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
+                        price={20}
+                        imageSrc="https://i.pinimg.com/236x/a2/26/39/a22639ab7161122e40f045efd6737415.jpg"
                         rating={3}
                     />
                     < Product
-                        id='1'
+                        id='C'
                         title="Computers & Accessories"
-                        price={50000}
-                        imageSrc="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2020/May/Dashboard/Fuji_Dash_PC_1x._SY304_CB431800965_.jpg"
+                        price={50}
+                        imageSrc="https://upload.wikimedia.org/wikipedia/commons/6/6f/Cimage.jpg"
                         rating={5}
                     />
                 </div>
                 <div className="home_row">
                     < Product
-                        id='1'
+                        id='A'
                         title="shashwat"
-                        price={50}
-                        imageSrc="https://m.media-amazon.com/images/I/410vdswIRnL._AC_SL260_.jpg"
+                        price={30}
+                        imageSrc="https://media.gettyimages.com/photos/heart-letter-a-picture-id171572940?s=612x612"
                         rating={5}
                     />
                     < Product
@@ -55,10 +55,10 @@ function Home() {
                 </div>
                 <div className="home_row">
                     < Product
-                        id='1'
+                        id='D'
                         title="Amazon Basics Small Digital Alarm Clock with Nightlight and Battery Backup, LED Display"
-                        price={6852}
-                        imageSrc="https://m.media-amazon.com/images/I/41gT9mzRM8L._AC_SY200_.jpg"
+                        price={15}
+                        imageSrc="https://static8.depositphotos.com/1010782/858/i/600/depositphotos_8581584-stock-photo-fire-alphabets-d.jpg"
                         rating={5}
                     />
                 </div>

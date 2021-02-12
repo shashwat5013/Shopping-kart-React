@@ -1,9 +1,9 @@
 import React from 'react'
-import './SubTotal.css'
-import CurrencyFormat from "react-currency-format"
+import './Discount.css'
 import { useStateValue } from './StateProvider'
 import { useHistory } from 'react-router-dom'
-function SubTotal(props) {
+import CheckoutProduct from './CheckoutProduct'
+function Discount() {
     const history = useHistory();
     const [state] = useStateValue();
     // let finalSum = 0, actualSum = 0, final_item_list = [];
@@ -63,40 +63,51 @@ function SubTotal(props) {
         return { finalSum, actualSum, final_item_list }
     }
     const values = getActualPrice();
+    console.log(values.final_item_list)
     return (
-        <div className="subtotal">
-            <CurrencyFormat className="currenyFormat"
-                renderText={
-                    (value) => (
+        <div className="discount">
+            <h2> Your Cark Details</h2>
+            {values.final_item_list.map((item) => (
+                <div className="discount_product">
+                    <div className="discount_product_info">
+                        <CheckoutProduct
+                            id={item.item.id}
+                            title={item.item.title}
+                            image={item.item.image}
+                            price={item.item.price}
+                            rating={item.item.rating}
+                            hidebutton
+                        />
+                    </div>
+                    <div className="discount_product_details">
+                        <div className="discount_itemCount">
+                            <strong>Items: </strong>{item.itemCount}
+                        </div>
+                        <div className="discount_itemCount">
+                            Rs.
+                            {item.actual_price !== item.final_price ?
+                                <>
+                                    < small style={{ "text-decoration": "line-through" }}>
+                                        {item.actual_price}
+                                    </small>
+                                    <strong style={{ "font-size": "25px", "font-weight": "500" }}>{item.final_price}</strong>
+                                </> : <strong style={{ "font-size": "25px", "font-weight": "500" }}>{item.final_price}</strong>
 
-                        <>
-                            <p>
-                                SubTotal ( {state.basket?.length} items):{values.actualSum !== values.finalSum ? <small style={{ "text-decoration": "line-through", "margin": "2px" }}>{`Rs. ${values.actualSum}`}</small> : ""}<strong>{`${value}`}</strong><br />
-                                <br />
-                                <small className="giftCard">
-                                    <input type='checkbox' />This order contains a giftcard
-                                </small>
-                            </p>
-                        </>
-                    )
-                }
-                decimalScale={2}
-                thousandSeparator={true}
-                displayType={"text"}
-                value={values.finalSum}
-                prefix={"Rs "}
-            />
+                            }
 
+                        </div>
+
+                    </div>
+                </div>
+            ))
+            }
             {state.sum === 0 ? <p></p> :
                 <div>
-                    <div className="subtotal_discoundList" onClick={(e) => history.push('/cartDetail')}>
-                        Click for full cart detail
-                    </div>
                     <button onClick={(e) => history.push('/payment')}>Proceed to Checkout</button>
                 </div>
             }
-        </div>
+        </div >
     )
 }
 
-export default SubTotal
+export default Discount
